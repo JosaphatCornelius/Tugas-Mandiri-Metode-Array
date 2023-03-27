@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Definisi dan Contoh Dari Beberapa Metode di Javascript</title>
+</head>
+<body>
+    <script>
+        // 1. Metode filter() membuat array baru yang diisi dengan elemen yang lulus uji yang disediakan oleh suatu fungsi.
+        //
+        // mendeklarasikan variable dengan tipe array untuk menyimpan input data awal
+        const ages = [32, 33, 16, 40];
+        // mendeklarasikan variable untuk menyimpan hasil dari filter
+        const result = ages.filter(checkAdult);
+        // membuat function untuk melakukan filter apakah angka di variable ages sudah termasuk dewasa
+        function checkAdult(age) {
+            return age >= 18;
+        }
+
+
+        // 2. Metode forEach() memanggil fungsi untuk setiap elemen dalam array.
+        //
+        // mendeklarasikan variable yang berisi input awal
+        const fruits = ["apple", "orange", "cherry"];
+        // memanggil function untuk setiap value/index dari variable fruits
+        fruits.forEach(myFunction);
+
+
+        // 3. Metode join() mengembalikan array sebagai string.
+        //
+        // mendeklarasikan variable array yang berisi value untuk program
+        const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+        // mengembalikan value dari array sebagai string
+        let text = fruits1.join();
+
+
+        // 4. For in statement JavaScript mengulang melalui properti object atau dari sebuah array.
+        //
+        // mendeklarasikan variable yang menyimpan value awal
+        const numbers = [45, 4, 9, 16, 25];
+        // mendeklarasikan text kosong
+        let txt = "";
+        // melakukan loop terhadap value di dalam const numbers dan menyimpannya di dalam variable text
+        for (let x in numbers) {
+            txt += numbers[x];
+        }
+
+
+        // 5. For of statement JavaScript dapat melakukan loop melalui nilai-nilai objek/array yang dapat diubah.
+        //
+        // mendeklarasikan variable array untuk menyimpan value awal
+        const cars = ["BMW", "Volvo", "Mini"];
+        // mendeklarasikan text kosong
+        let text1 = "";
+        // melakukan loop terhadap value di dalam const cars dan menyimpannya di dalam variable text
+        for (let x of cars) {
+            text1 += x;
+        }
+
+
+        // 6. Metode splice() menambahkan dan/atau menghapus elemen array, serta menimpa array orisinil nya.
+        //
+        // mendeklarasikan variable array baru
+        const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+        // melakukan pengubahan terhadap index 2 dan 0 di variable array yang sebelumnya
+        fruits2.splice(2, 0, "Lemon", "Kiwi");
+
+
+        // 7. Metode slice() mengembalikan elemen yang dipilih dalam array, sebagai array baru.
+        //
+        // mendeklarasikan variable baru untuk menyimpan data array
+        const fruits3 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+        // mengambil beberapa value dari index array yang dipilih
+        const citrus = fruits3.slice(1, 3);
+
+
+        // 8. Metode split() membagi string menjadi array substring. Metode split() mengembalikan array baru.
+        //
+        // mendeklarasikan variable text yang berisi string
+        let text2 = "How are you doing today?";
+        // melakukan text split terhadap kalimat string
+        const myArray = text.split(" ");
+        // memisahkan text nya, kemudian mengembalikan kata kedua
+        let word = myArray[1];
+
+
+        // 9. Metode reverse() membalikkan urutan elemen dalam array. Metode reverse() menimpa array asli.
+        //
+        // mendeklarasikan variable baru
+        const fruits4 = ["Banana", "Orange", "Apple", "Mango"];
+        // membalikkan urutan dari array
+        fruits4.reverse();
+    </script>
+</body>
+</html>
